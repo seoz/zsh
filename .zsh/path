@@ -1,0 +1,15 @@
+~/bin
+~/s
+/usr/local/bin
+/usr/local/sbin
+/bin
+/usr/bin
+/usr/X11R6/bin
+/usr/games
+/sbin
+/usr/sbin
+/usr/X11R6/lib/xscreensaver
+.
+~/sbs-install/bin
+~/tizen_sdk/SDK/build-system/toolchains/scratchbox2/bin/
+~/tizen-sdk/tools

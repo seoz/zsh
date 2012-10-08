@@ -1,0 +1,14 @@
+*~
+*.o
+*.lo
+*.a
+*.so
+*.so.?
+*.so.?.*
+*.bak
+*.la
+.#*
+#*
+.libs
+.deps
+Cache

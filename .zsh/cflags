@@ -1,0 +1,2 @@
+-O0 -g3 -pipe -march=native -fvisibility=hidden -ffast-math -W -Wall -Wextra
+

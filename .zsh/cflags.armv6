@@ -1,0 +1,1 @@
+-O2 -march=armv6j -mtune=arm1136jf-s -mfpu=vfp -mfloat-abi=softfp -pipe -fvisibility=hidden 

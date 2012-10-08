@@ -1,0 +1,55 @@
+alias ls='ls -sF --color -C -h -v'
+alias l='ls -sF --color -C -h -v'
+alias md='mkdir'
+alias rd='rmdir'
+alias ..='cd ..'
+alias cls=clear
+alias XX='echo "Rescanning RC";. ~/.zshrc'
+alias sl='ls'
+alias dir='ls -al'
+alias dri='ls -al'
+alias pc='cp'
+alias vm='mv'
+alias dograb='import -window root'
+alias cformat='indent -i2 -bl -bad -nbap -sob -ncdb -di20 -nbc -lp -nce -npcs -sc -ncs -l80'
+alias e='jed'
+alias j='jed'
+alias ed='jed'
+alias d1='export DISPLAY=$HOST:1'
+alias d0='export DISPLAY=:0'
+# if our system has /proc/cpuinfo
+if [ -f /proc/cpuinfo ]; then
+# if we have more than 1 cpu...
+  N=`cat /proc/cpuinfo | grep processor | wc -l`
+  if [ "$N" -gt 1 ]; then
+    MAKETH=$[ $N + 1 ];
+    alias make='make MAKE="make -j$MAKETH"'
+    export MAKEFLAGS="-j$MAKETH"
+  else
+    unalias make
+    unset MAKEFLAGS
+  fi
+fi
+
+alias cpu.g='export CFLAGS="`cat $ZH/cflags.g`"'
+alias cpu.dev='export CFLAGS="`cat $ZH/cflags.dev`"'
+alias cpu.warn='export CFLAGS="`cat $ZH/cflags.warn`"'
+alias cpu.armv6='export CFLAGS="`cat $ZH/cflags.armv6`"'
+alias cpu.armv7='export CFLAGS="`cat $ZH/cflags.armv7`"'
+alias cpu.gprof='export CFLAGS="`cat $ZH/cflags.gprof`"; export LDFLAGS="`cat $ZH/cflags.gprof`";'
+
+alias man='LC_CTYPE="" man'
+alias vgd='valgrind --db-attach=yes --leak-check=full --leak-resolution=high --num-callers=32'
+#alias vgd='valgrind --leak-check=full --leak-resolution=high --show-reachable=yes --num-callers=32'
+alias eina-log='export EINA_LOG_LEVELS=eina_module:4'
+alias pb='pastebinit -b http://slexy.org'
+#alias pb='pastebinit -b http://pastebin.com'
+#alias pb='pastebinit -b http://yourpaste.net'
+
+########### sbs ############
+alias sbsi='sbs -A i386'
+alias sbsiu='sbs -A i386 -et apt-get update'
+alias sbsu='sbs -et apt-get update'
+
+alias abcdefghijklmnopqrstuvwxyz='echo "Great!"'
+alias grep='grep -rnI --color'
